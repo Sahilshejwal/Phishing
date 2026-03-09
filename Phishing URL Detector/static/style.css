@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BACKGROUND */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  overflow: hidden;
+}
+
+/* ANIMATED BACKGROUND */
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(#00ffff 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.15;
+  animation: starsMove 50s linear infinite;
+}
+
+@keyframes starsMove {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(-600px,-600px);
+  }
+}
+
+/* MAIN CARD */
+
+.container {
+  width: 520px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(15,23,42,0.65);
+  border: 1px solid rgba(0,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 35px rgba(0,255,255,0.25);
+  position: relative;
+  z-index: 1;
+}
+
+/* TITLE */
+
+h1 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg,#00ffff,#9333ea,#f72585);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* SUBTITLE */
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* LABEL */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5f5;
+  font-weight: 500;
+}
+
+/* INPUT FIELD */
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #334155;
+  color: white;
+  margin-bottom: 20px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* BUTTON */
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg,#00ffff,#9333ea,#f72585);
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #9333ea;
+}
+
+/* RESULT BOX */
+
+.result {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #334155;
+  text-align: center;
+  font-size: 16px;
+}

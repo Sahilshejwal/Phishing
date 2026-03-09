@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Phishing URL Detector</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Phishing URL Detector</h1>
+
+<form method="POST">
+
+<input type="text" name="url" placeholder="Enter website URL">
+
+<button type="submit">Check URL</button>
+
+</form>
+
+{% if result %}
+
+<h2>{{ result }}</h2>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
